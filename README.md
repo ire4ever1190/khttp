@@ -23,19 +23,23 @@ fun main(args: Array<out String>) {
 
 ### Stable
 
-Stable releases are hosted on [JCenter](https://bintray.com/bintray/jcenter).
+Stable releases are hosted on [Jitpack](https://jitpack.io/).
+first add this to your build.gradle
 
 ```xml
-<repository>
-  <id>jcenter</id>
-  <url>http://jcenter.bintray.com/</url>
-</repository>
-<!-- ... -->
-<dependency>
-  <groupId>khttp</groupId>
-  <artifactId>khttp</artifactId>
-  <version>0.1.0</version>
-</dependency>
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Then add the dependency
+```
+dependencies {
+        ...
+		implementation 'com.github.ire4ever1190:khttp:0.2.0'
+	}
 ```
 
 ### Development
